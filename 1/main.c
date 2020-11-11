@@ -4,7 +4,7 @@
 
 char ** read(int * size);
 void sort(char ** string_arr, int size);
-void answer(char ** string_arr);
+void out_str(char ** string_arr);
 
 int cmp(const void* a, const void * b);
 int int_num(char * string);
@@ -18,7 +18,7 @@ int main(){
 
     sort(string_arr, size);
 
-    answer(string_arr);
+    out_str(string_arr);
 
     clear_arr(string_arr, size);
 
@@ -81,7 +81,7 @@ int int_num(char * string){
     return res;
 }
 
-void answer(char ** string_arr){
+void out_str(char ** string_arr){
     printf("%d ", int_num(string_arr[0]));
     char *c = string_arr[0];
     for(int i = 0 ; ; ++c){
